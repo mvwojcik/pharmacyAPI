@@ -24,6 +24,8 @@ import static org.mockito.ArgumentMatchers.*;
 @ExtendWith(MockitoExtension.class)
 public class MedicineServiceTest {
 
+    private static final double DELTA = 1e-6;
+
     @Mock
     MedicineRepository medicineRepository;
 
@@ -52,6 +54,8 @@ public class MedicineServiceTest {
         Assert.assertEquals(dto.getId(), medicine.getId());
         Assert.assertEquals(dto.getName(), medicine.getName());
         Assert.assertEquals(dto.getIsPrescript(), medicine.isPrescript());
+        Assert.assertEquals(dto.getDescription(), medicine.getDescription());
+        Assert.assertEquals(dto.getPrice(), medicine.getPrice(), DELTA);
 
         Mockito.verify(medicineRepository).findById(anyLong());
     }
@@ -97,6 +101,8 @@ public class MedicineServiceTest {
         Assert.assertEquals(dto.getId(), medicine.getId());
         Assert.assertEquals(dto.getName(), medicine.getName());
         Assert.assertEquals(dto.getIsPrescript(), medicine.isPrescript());
+        Assert.assertEquals(dto.getPrice(), medicine.getPrice(), DELTA);
+        Assert.assertEquals(dto.getDescription(), medicine.getDescription());
         Mockito.verify(medicineRepository).existsByName(anyString());
         Mockito.verify(medicineRepository).save(any());
 
@@ -119,6 +125,8 @@ public class MedicineServiceTest {
         Assert.assertEquals(dto.getId(), medicine.getId());
         Assert.assertEquals(dto.getName(), medicine.getName());
         Assert.assertEquals(dto.getIsPrescript(), medicine.isPrescript());
+        Assert.assertEquals(dto.getPrice(), medicine.getPrice(), DELTA);
+        Assert.assertEquals(dto.getDescription(), medicine.getDescription());
         Mockito.verify(medicineRepository).findById(anyLong());
         Mockito.verify(medicineRepository).save(any());
     }

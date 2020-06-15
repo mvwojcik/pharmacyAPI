@@ -52,6 +52,8 @@ public class EntityHelper {
                 .id(id)
                 .name("Acodin")
                 .isPrescript(false)
+                .price(3.33)
+                .description("Bardzo mocny lek")
                 .medicineOrders(new HashSet<>())
                 .prescriptions(new HashSet<>())
                 .build();
@@ -62,6 +64,8 @@ public class EntityHelper {
                 .id(medicine.getId())
                 .name(medicine.getName())
                 .isPrescript(medicine.isPrescript())
+                .price(medicine.getPrice())
+                .description(medicine.getDescription())
                 .build();
     }
     

@@ -14,4 +14,6 @@ public class MedicineDTO {
     private Long id;
     private String name;
     private Boolean isPrescript;
+    private String description;
+    private double price;
 }

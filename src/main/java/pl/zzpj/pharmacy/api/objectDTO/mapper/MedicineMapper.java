@@ -12,6 +12,8 @@ public class MedicineMapper {
                 .id(medicineDTO.getId())
                 .isPrescript(medicineDTO.getIsPrescript())
                 .name(medicineDTO.getName())
+                .price(medicineDTO.getPrice())
+                .description(medicineDTO.getDescription())
                 .prescriptions(new HashSet<>())
                 .medicineOrders(new HashSet<>())
                 .build();
@@ -23,6 +25,8 @@ public class MedicineMapper {
                 .id(medicine.getId())
                 .name(medicine.getName())
                 .isPrescript(medicine.isPrescript())
+                .price(medicine.getPrice())
+                .description(medicine.getDescription())
                 .build();
     }
 

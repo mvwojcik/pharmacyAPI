@@ -4,13 +4,16 @@ INSERT INTO employees (first_name, last_name, login, password) VALUES
 INSERT INTO clients (first_name, last_name, address) VALUES
     ('Monika', 'Ratownika', 'Tutaj');
 
-INSERT INTO medicines (is_Prescript, name) VALUES
-(true, 'Apap'),
-(false, 'Aspiryna'),
-(false, 'Viagra'),
-(true, 'Acodin');
+
+INSERT INTO medicines (is_Prescript, name, price, description) VALUES
+(true, 'Apap', '3.33', 'Na glowe'),
+(false, 'Aspiryna', '6.66', 'Na przeziebienie'),
+(false, 'Viagra', '7.77', 'Nie wiem co to'),
+(true, 'Acodin', '8.88', 'Na kaszel');
 
 insert into orders (id, client_id) values (1,1);
 insert into medicine_order(amount, order_id, medicine_id) values
 (1, 1, 1),
 (2, 1, 2);
+
+
