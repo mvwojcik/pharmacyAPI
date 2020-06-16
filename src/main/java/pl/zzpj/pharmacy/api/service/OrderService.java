@@ -11,10 +11,13 @@ import pl.zzpj.pharmacy.api.repository.ClientRepository;
 import pl.zzpj.pharmacy.api.repository.OrderRepository;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import org.apache.commons.lang3.tuple.Pair;
+import pl.zzpj.pharmacy.api.repository.Raport;
 
 @Service
 public class OrderService {
@@ -22,7 +25,7 @@ public class OrderService {
     private final OrderRepository ordersRepository;
     private final ClientRepository clientRepository;
 
-    @Autowired
+
     public OrderService(OrderRepository ordersRepository, ClientRepository clientRepository) {
         this.ordersRepository = ordersRepository;
         this.clientRepository = clientRepository;
@@ -36,7 +39,7 @@ public class OrderService {
 
     public void removeOrder(long id) {
         //simplify logic throwing exception
-        if (this.ordersRepository.existsById(id)) {
+        if (ordersRepository.existsById(id)) {
             ordersRepository.deleteById(id);
         } else {
             throw new EntityNotFoundException();
@@ -51,7 +54,7 @@ public class OrderService {
     }
 
     public OrderDTO createOrder(OrderDTO order) {
-        Optional<Client> optionalClient = this.clientRepository.findById(order.getClient()
+        Optional<Client> optionalClient = clientRepository.findById(order.getClient()
                                                                               .getId());
         return optionalClient.map(client -> OrderMapper.toOrder(order, client))
                              .map(ordersRepository::save)
@@ -60,7 +63,7 @@ public class OrderService {
     }
 
     public OrderDTO updateOrder(OrderDTO order) {
-        Optional<Client> optionalClient = this.clientRepository.findById(order.getClient()
+        Optional<Client> optionalClient = clientRepository.findById(order.getClient()
                                                                               .getId());
         Function<Client, OrderDTO> processUpdate = client ->
                 ordersRepository.findById(order.getId())
@@ -70,5 +73,16 @@ public class OrderService {
                                         "order does not exist"));
         return optionalClient.map(processUpdate)
                              .orElseThrow(EntityNotFoundException::new);
+    }
+
+    public  HashMap<Long, String> getAllRaports() {
+
+        HashMap<Long, String> raports = new HashMap<>();
+        List<Raport> raportList = ordersRepository.getRaportForOrders();
+
+        for(Raport raport : raportList){
+            raports.put(raport.getOrderID(), raport.getFirstName()+" "+raport.getLastName()+", medicines: "+raport.getMedicines());
+        }
+        return raports;
     }
 }
