@@ -1,0 +1,16 @@
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                                                                          ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}          ${AnsiBackground.WHITE}      ${Ansi.BLUE}            ___  _____   ___                    ${AnsiBackground.RED}          ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}          ${AnsiBackground.WHITE}      ${Ansi.BLUE}        \  |___|   |    |__   |/    \           ${AnsiBackground.RED}          ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}          ${AnsiBackground.WHITE}      ${Ansi.BLUE}      /--\ |       |    |___  |\  /--\          ${AnsiBackground.RED}          ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}          ${AnsiBackground.WHITE}                                                      ${AnsiBackground.RED}          ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                             ${AnsiBackground.WHITE}                ${AnsiBackground.RED}                             ${AnsiBackground.BRIGHT_WHITE}
+${AnsiBackground.BRIGHT_WHITE}          ${AnsiBackground.RED}                                                                          ${AnsiBackground.BRIGHT_WHITE}
+                   ${Ansi.BLACK}'ZAAWANSOWANE ZAGADNIENIA PROGRAMOWANIA W JAVA 2020'
+
